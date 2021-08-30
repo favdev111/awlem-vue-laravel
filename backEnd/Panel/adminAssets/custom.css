@@ -1,0 +1,57 @@
+.row.card_view {
+    margin: 1px;
+    padding: 2px;
+    border-top: 1px solid #eaeaea;
+}
+
+.make_border {
+    color: #fff;
+    /* border-left: 1px solid #aba6a6; */
+    border-right: 1px solid #aba6a6;
+    padding: 1px;
+}
+
+.make_border div {
+    background: #2e86dd;
+    width: 99%;
+    height: 100%;
+    line-height: 1;
+    padding: 2%;
+}
+
+.type {
+    font-size: .8rem;
+    background-color: #4892e1;
+    height: 58px;
+    width: 68px;
+    text-align: center;
+    color: #ffffff;
+    position: absolute;
+    top: 0;
+    line-height: 5;
+    border-radius: 0 0 10px 10px;
+    font-weight: bold;
+    box-shadow: 1px 3px 3px #bfbfbf;
+}
+
+thead {
+    background: #4A4A48;
+    color: #fafbfc;
+}
+
+#static_0 {
+    margin: 0;
+    padding: 0;
+    color: red;
+}
+
+#static_1 {
+    margin: 0;
+    padding: 0;
+    color: green;
+}
+
+a.chosen-single {
+    height: 34px !important;
+    line-height: 2.5;
+}

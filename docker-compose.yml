@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+    web:
+        image: thecodingmachine/php:7.3-v2-apache-node10
+        ports:
+            - "80:80"
+        environment:
+          # Docker image.
+          APACHE_DOCUMENT_ROOT: public
+          PHP_INI_MEMORY_LIMIT: 1G
+          PHP_INI_MAX_EXECUTION_TIME: 600
+          PHP_EXTENSION_XDEBUG: 1
+          PHP_EXTENSION_WEAKREF: 1
+          PHP_EXTENSION_GD: 1
+        volumes:
+          - ./:/var/www/html:rw
+    db:
+        image: mysql:5.6
+        environment:
+            MYSQL_ROOT_PASSWORD: db
+            MYSQL_DATABASE: jam3ha_awlem
+            MYSQL_USER: jam3ha_awlem
+            MYSQL_PASSWORD: ukNVfUVVT*mW
+        volumes:
+        - .docker/mysql:/var/lib/mysql
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin:4.8
+        ports:
+            - "8002:80"
+        environment:
+            PMA_HOST: db
+            PMA_USER: jam3ha_awlem
+            PMA_PASSWORD: ukNVfUVVT*mW
